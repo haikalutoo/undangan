@@ -65,8 +65,10 @@ function GetURLParameter(sParam)
         }
     }
 }
-const untuk = GetURLParameter('untuk');
-txtNama.innerHTML = untuk.replace(/%20/g, ' ');
+let untuk = GetURLParameter('untuk');
+untuk = untuk.replace(/%20/g, " ");
+untuk = untuk.replace(/%26/g, "&");
+txtNama.innerHTML = untuk;
 
     // audio
 const myAudio = document.querySelector('#Audio');
