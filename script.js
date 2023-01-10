@@ -227,9 +227,11 @@ const inputNama = document.querySelector('#nama'),
 ucapan = document.querySelector('#ucapan');
 hadir = document.querySelector('#hadir'),
 tidakHadir = document.querySelector('#tidak-hadir'),
+kehadiran = [hadir, tidakHadir];
 btn = document.querySelector('.btn'),
 scriptURL = 'https://script.google.com/macros/s/AKfycbw38WXmGC7xpyM8Ybomy_42-pcyo_n5kW1gIvjmdsuQmhCYTeLnpH7BVIxUlv8V2GOhhA/exec',
 form = document.forms['kirim-ke-google-sheet'];
+const jumlahTamu = document.querySelector('#jumlah-tamu');
         
 form.addEventListener('submit', e => {
     e.preventDefault();
@@ -239,8 +241,13 @@ form.addEventListener('submit', e => {
         kotakAlert.style.color = '#800f0f';
         kotakAlert.innerHTML = 'Masukkan minimal 3 karakter.';
         kotakAlert.style.display = 'flex';
+    } else if (jumlahTamu.value < 1 || jumlahTamu.value > 2) {
+        kotakAlert.style.backgroundColor = '#e3c3c3';
+        kotakAlert.style.color = '#800f0f';
+        kotakAlert.innerHTML = 'Masukkan jumlah tamu';
+        kotakAlert.style.display = 'flex';
     } else if (btn.textContent == 'terkirim') {
-	      kotakAlert.style.backgroundColor = '#b4d9c2';
+	    kotakAlert.style.backgroundColor = '#b4d9c2';
         kotakAlert.style.color = '#095c29';
         kotakAlert.innerHTML = 'Anda sudah mengirimkan pesan';
         kotakAlert.style.display = 'flex';
@@ -260,6 +267,7 @@ form.addEventListener('submit', e => {
             .catch(error => console.error('Error!', error.message));
     }
 });
+
 
 // waktu 
 // Mengatur waktu akhir perhitungan mundur
