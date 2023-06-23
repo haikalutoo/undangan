@@ -8,7 +8,7 @@ const h1 = [pria, dan, wanita];
 const bukaUndangan = document.querySelector('.opening .buka-undangan');
 
 const foto = document.querySelector('.foto img');
-const bulet = document.querySelectorAll('.bulet');
+const bulet = document.querySelectorAll('.foto .bulet');
 
 const navigasiHome = document.querySelector('.navigasi-home');
 const navigasiLokasi = document.querySelector('.navigasi-lokasi');

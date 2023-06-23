@@ -267,7 +267,6 @@ video {
     margin: 1rem;
     background: var(--gradient);
     position: absolute;
-    padding: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -293,6 +292,7 @@ video {
 }
 .konfirmasi form {
     width: 100%;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
 }
