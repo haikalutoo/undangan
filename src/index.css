@@ -46,7 +46,6 @@ video {
     max-height: 500px;
     background: var(--gradient);
     border-radius: 50px 0 50px 0;
-    backdrop-filter: blur(1px);
     color: #eaeaea;
     display: flex;
     flex-direction: column;
