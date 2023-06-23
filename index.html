@@ -4,143 +4,93 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="src/index.css">
     <title>For You</title>
 </head>
 <body>
-    <audio id="Audio" src="audio/fantasy-music-invitation.m4a" loop></audio>
+    <audio id="audio" src="src/assets/audio/fantasy-music-invitation.m4a" loop></audio>
     <div class="container">
-        <video class="pidio" src="video/bg-720.mp4" autoplay muted loop></video>
-        <div class="layer">
-            
-            <div class="kotak-awal">
-                <p class="txt-wedding">The Wedding of</p>
-                <h1 class="txt-ryevo-nadia"><span class="txt-ryevo">Ryevo</span> & <span class="txt-nadia">Nadia</span></h1>
-                <p class="txt-hari">Sabtu</p>
-                <p class="txt-tanggal">21 Januari 2023</p>
-                <img class="kembang" src="img/line.png" alt="kembang" width="200px">
-                <p class="txt-yth">Yth</p>
-                <p class="txt-nama">Nama</p>
-                <p class="txt-kata">
-                    Tanpa mengurangi rasa hormat, Kami mengundang Anda untuk hadir di acara pernikahan Kami.
-                </p>
-                <div class="kotak-buka">
-                    <div class="tombol-buka">
-                        <p>Buka Undangan</p>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-open" viewBox="0 0 16 16">
-                            <path d="M8.47 1.318a1 1 0 0 0-.94 0l-6 3.2A1 1 0 0 0 1 5.4v.817l5.75 3.45L8 8.917l1.25.75L15 6.217V5.4a1 1 0 0 0-.53-.882l-6-3.2ZM15 7.383l-4.778 2.867L15 13.117V7.383Zm-.035 6.88L8 10.082l-6.965 4.18A1 1 0 0 0 2 15h12a1 1 0 0 0 .965-.738ZM1 13.116l4.778-2.867L1 7.383v5.734ZM7.059.435a2 2 0 0 1 1.882 0l6 3.2A2 2 0 0 1 16 5.4V14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5.4a2 2 0 0 1 1.059-1.765l6-3.2Z"/>
-                        </svg>
+        <video src="src/assets/video/720.mp4" autoplay muted loop></video>
+        <div class="front">
+            <div class="opening">
+                <div class="buka-undangan">
+                    <p>Buka Undangan</p>
+                    <i class="bi bi-envelope-open-fill"></i>
+                </div>
+                <p>The Wedding of</p>
+                <h1>
+                    <span class="ryevo">Ryevo</span>
+                    <span class="dan">&</span>
+                    <span class="nadia">Nadia</span>
+                </h1>
+                <p>Sabtu</p>
+                <p>21 Januari 2023</p>
+                <img src="src/assets/images/more/line.png" alt="kembang">
+                <p>Yth</p>
+                <p><strong>Udin</strong></p>
+                <p>Tanpa mengurangi rasa hormat, Kami mengundang Anda untuk hadir di acara pernikahan Kami.</p>
+            </div>
+            <div class="undangan">
+                <div class="navigasi">
+                    <div class="navigasi-home">
+                        <i class="bi bi-house-fill"></i>
+                        <span>Home</span>
+                    </div>
+                    <div class="navigasi-lokasi">
+                        <i class="bi bi-house-fill"></i>
+                        <span>Lokasi</span>
+                    </div>
+                    <div class="navigasi-foto">
+                        <i class="bi bi-house-fill"></i>
+                        <span>Foto</span>
+                    </div>
+                    <div class="navigasi-konfirmasi">
+                        <i class="bi bi-house-fill"></i>
+                        <span>Konfirmasi</span>
                     </div>
                 </div>
             </div>
-            <div class="kotak-undangan">
-                <div class="bar">
-                    <div class="kotak tombol-home">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
-                            <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z"/>
-                        </svg>
-                        <p>Home</p>
-                    </div>
-                    <div class="kotak tombol-location">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-                            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
-                        </svg>
-                        <p>Lokasi</p>
-                    </div>
-                    <div class="kotak tombol-photo">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-image-fill" viewBox="0 0 16 16">
-                            <path d="M.002 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-12a2 2 0 0 1-2-2V3zm1 9v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12zm5-6.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0z"/>
-                        </svg>
-                        <p>Foto</p>
-                    </div>
-                    <div class="kotak tombol-ucapan">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-left-text-fill" viewBox="0 0 16 16">
-                            <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z"/>
-                        </svg>
-                        <p>Konfirmasi</p>
-                    </div>
-                </div>
-            </div>
-            <div class="kotak-location">
-                <h1 class="judul-location">Lokasi</h1>
+            <div class="lokasi">
+                <div class="lokasi-close">x</div>
+                <h1>Lokasi</h1>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.99792140168!2d106.7883985!3d-6.264002099999988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f1951c5ba523%3A0x6df1fe4fe922fdea!2sASTON%20Bellevue%20Radio%20Dalam!5e0!3m2!1sid!2sid!4v1672457065898!5m2!1sid!2sid" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <p class="close-map">Close</p>
             </div>
-            <div class="kotak-photo">
-                <div class="photo">
-                    <img src="img/photo/1.jpg" alt="1" class="img-gede">
-                    <p class="close-photo">Close</p>
-                </div>
-                <div class="thumbs">
-                    <img src="img/photo/1.jpg" alt="1" class="alb">
-                    <img src="img/photo/2.jpg" alt="2" class="alb">
-                    <img src="img/photo/3.jpg" alt="3" class="alb">
-                    <img src="img/photo/4.jpg" alt="4" class="alb">
-                    <img src="img/photo/5.jpg" alt="5" class="alb">
-                    <div class="kanan">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-                        </svg>
-                    </div>
-                    <div class="kiri">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
-                        </svg>
-                    </div>
+            <div class="foto">
+                <div class="foto-close">x</div>
+                <div class="kiri">kiri</div>
+                <div class="kanan">kanan</div>
+                <img src="src/assets/images/pictures/0.jpg" alt="">
+                <div class="navigasi">
+                    <span class="bulet 0 active"></span>
+                    <span class="bulet 1"></span>
+                    <span class="bulet 2"></span>
+                    <span class="bulet 3"></span>
+                    <span class="bulet 4"></span>
                 </div>
             </div>
-            <div class="kotak-ucapan">
-                <form name="kirim-ke-google-sheet">
-                    <p class="close-ucapan">Close</p>
-                    <div class="kata-ucapan">
-                        <h1 class="h-doa">Kirim doa dan Ucapan</h1>
-                        <p>Tuliskan sesuatu ucapan berupa harapan ataupun doa untuk kedua mempelai.</p>
+            <div class="konfirmasi">
+                <h1>Kirim Doa dan Ucapan</h1>
+                <p>Tuliskan sesuatu ucapan berupa harapan ataupun doa untuk kedua mempelai.</p>
+                <form>
+                    <div class="konfirmasi-close">x</div>
+                    <div class="alert">
+                        <p class="teks-alert"><!-- Terima kasih! pesan anda sudah kami terima --></p>
                     </div>
-                    <input id="nama" name="nama" type="text" placeholder="Tuliskan nama">
-                    <textarea id="ucapan" name="ucapan" cols="30" rows="10" placeholder="Tuliskan ucapan atau doa untuk kedua mempelai"></textarea>
-                    <p>Apakah anda akan hadir memenuhi undangan saya?</p>
-                    <div class="radio-satu">                      
-                        <input id="hadir" value="hadir" name="kehadiran" type="radio">
-                        <label for="hadir">Hadir</label>
-                    </div>
-                    <div class="radio-dua">
-                        <input id="tidak-hadir" value="tidak-hadir" name="kehadiran" type="radio">
-                        <label for="tidak-hadir">Tidak Hadir</label>
-                    </div>
-                    <div class="kotak-select">
-                        <select name="tamu" id="jumlah-tamu">
-                            <option value="0">Jumlah Tamu:</option>
-                            <option value="1">1 orang</option>
-                        </select>
-                    </div>
-                    <button class="btn" type="submit">Kirim</button>
-                    <div class="kotak-alert"></div>
+                    <label for="nama">Nama</label>
+                    <input type="text" placeholder="Masukkan nama" id="nama">
+                    <label for="pesan">Pesan</label>
+                    <textarea id="pesan" cols="30" rows="10" placeholder="Masukkan pesan"></textarea>
+                    <button type="submit">Kirim</button>
                 </form>
-            </div>
-            <div class="kotak-waktu">
-                <div class="waktu">
-                    <p id="hari">0</p>
-                    <p>Hari</p>
-                </div>
-                <div class="waktu">
-                    <p id="jam">0</p>
-                    <p>Jam</p>
-                </div>
-                <div class="waktu">
-                    <p id="menit">0</p>
-                    <p>Menit</p>
-                </div>
-                <div class="waktu">
-                    <p id="detik">0</p>
-                    <p>Detik</p>
-                </div>
             </div>
         </div>
     </div>
     
-    <script src="script.js"></script>
+
+    <script type="module" src="src/index.js"></script>
 </body>
 </html>
