@@ -112,12 +112,18 @@
     nama.innerHTML = untuk ? untuk : 'Untuk memasukkan nama tulis ?untuk=nama diakhir url';
     
     /* EVENTS */
+    // LOAD
     window.onload = async _ => {
         await tunggu(1000);
         animasiOpening();
     }
-    
-    window.onclick = async ({ target }) => {
+    // READYSTATE
+    document.onreadystatechange = _ => {
+        if (document.readyState !== 'complete') return document.body.style.visibility = 'hidden';
+        return document.body.style.visibility = 'visible';
+    }
+    // CLICK
+    document.onclick = async ({ target }) => {
     
         // UNDANGAN
         if (

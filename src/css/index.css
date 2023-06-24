@@ -253,7 +253,7 @@ video {
     position: absolute;
 }
 .foto .kiri, .foto .kanan {
-    padding: 0 .3rem;
+    padding: .4rem .7rem;
     background: var(--gradient);
     border-radius: 50%;
 }
@@ -366,7 +366,7 @@ video {
     font-family: cursive;
     margin: 0 .5rem;
     position: absolute;
-    font-size: 2rem;
+    font-size: 2.5rem;
     top: 0;
     right: 0;
 }
