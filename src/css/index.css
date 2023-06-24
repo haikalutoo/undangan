@@ -329,30 +329,6 @@ video {
 .konfirmasi button:hover {
     background-color: rgba(156, 46, 77, 0.5);
 }
-.konfirmasi .alert {
-    padding: 1rem 0;
-    text-align: center;
-    display: none;
-}
-.konfirmasi .alert p {
-    padding: 1rem 0;
-    border-radius: 4px;
-}
-.konfirmasi .alert p.ijo {
-    color: #75b798;
-    background-color: #051B11;
-    border: 1px solid #0F5132;
-}
-.konfirmasi .alert p.kuning {
-    color: #ffda6a;
-    background-color: #332701;
-    border: 1px solid #997404;
-}
-.konfirmasi .alert p.merah {
-    color: #ea868f;
-    background-color: #2c0b0e;
-    border: 1px solid #842029;
-}
 
 /* GLOBAL */
 .lokasi .lokasi-close,
