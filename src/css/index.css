@@ -78,7 +78,6 @@ video {
     height: 60px;
     padding: 10px;
     position: absolute;
-    z-index: 20;
     right: 0;
     background: inherit;
     display: flex;
@@ -93,13 +92,6 @@ video {
 .opening .buka-undangan.return {
     scale: 1;
     opacity: 1;
-}
-.opening .buka-undangan .buka-undangan-front {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
 }
 .opening p, .opening img {
     transform: translateY(100px);
@@ -148,9 +140,9 @@ video {
     background-repeat: no-repeat;
     background-size: cover;
     transition: 1s;
-    /* transform: rotate(180deg);
+    transform: rotate(180deg);
     scale: 0;
-    opacity: 0; */
+    opacity: 0;
 }
 .undangan.return {
     transform: rotate(0);
@@ -194,7 +186,7 @@ video {
     align-items: center;
     justify-content: center;
     transform: translateX(300%);
-    /* opacity: 0; */
+    opacity: 0;
     transition: 1s;
 }
 .lokasi.return {
@@ -220,7 +212,7 @@ video {
     align-items: center;
     display: flex;
     transform: translateX(300%);
-    /* opacity: 0; */
+    opacity: 0;
     transition: 1s;
 }
 .foto.return {
@@ -282,7 +274,7 @@ video {
     justify-content: center;
     align-items: center;
     transform: translateX(300%);
-    /* opacity: 0; */
+    opacity: 0;
     transition: 1s;
 }
 .konfirmasi.return {

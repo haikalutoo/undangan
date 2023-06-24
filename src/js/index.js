@@ -128,7 +128,8 @@
         // UNDANGAN
         if (
             target === bukaUndangan ||
-            target.classList.contains('buka-undangan-front')
+            target === bukaUndangan.firstElementChild ||
+            target === bukaUndangan.lastElementChild
         ) {
             audio.play();
             animasiOpening();
