@@ -54,15 +54,13 @@ video {
     padding: 1rem;
     position: relative;
     margin: 0 1rem;
-    transform: rotate(180deg);
-    scale: 0;
+    transform: rotate(180deg) scale(0);
     opacity: 0;
     transition: 1s;
 }
 .opening.return {
-    transform: rotate(0);
+    transform: rotate(0) scale(1);
     opacity: 1;
-    scale: 1;
 }
 .opening img {
     width: 230px;
@@ -140,13 +138,11 @@ video {
     background-repeat: no-repeat;
     background-size: cover;
     transition: 1s;
-    transform: rotate(180deg);
-    scale: 0;
+    transform: rotate(180deg) scale(0);
     opacity: 0;
 }
 .undangan.return {
-    transform: rotate(0);
-    scale: 1;
+    transform: rotate(0) scale(1);
     opacity: 1;
 }
 .undangan .navigasi {
@@ -185,15 +181,13 @@ video {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transform: translateX(300%);
-    scale: 0;
+    transform: translateX(300%) scale(0);
     opacity: 0;
     transition: 1s;
 }
 .lokasi.return {
-    scale: 1;
     opacity: 1;
-    transform: translateX(0);
+    transform: translateX(0) scale(1);
 }
 .lokasi iframe {
     width: 100%;
@@ -213,15 +207,13 @@ video {
     justify-content: center;
     align-items: center;
     display: flex;
-    transform: translateX(300%);
-    scale: 0;
+    transform: translateX(300%) scale(0);
     opacity: 0;
     transition: 1s;
 }
 .foto.return {
-    scale: 1;
     opacity: 1;
-    transform: translateX(0);
+    transform: translateX(0) scale(1);
 }
 .foto .navigasi {
     width: 100%;
@@ -277,15 +269,13 @@ video {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transform: translateX(300%);
-    scale: 0;
+    transform: translateX(300%) scale(0);
     opacity: 0;
     transition: 1s;
 }
 .konfirmasi.return {
-    scale: 1;
     opacity: 1;
-    transform: translateX(0);
+    transform: translateX(0) scale(1);
 }
 .konfirmasi * {
     box-sizing: border-box;

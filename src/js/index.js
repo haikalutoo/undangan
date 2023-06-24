@@ -133,7 +133,7 @@
             target === bukaUndangan.firstElementChild ||
             target === bukaUndangan.lastElementChild
         ) {
-            audio.play();
+            // audio.play();
             animasiOpening();
             animasiUndangan();
             return;
