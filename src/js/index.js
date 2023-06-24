@@ -119,8 +119,10 @@
     }
     // READYSTATE
     document.onreadystatechange = _ => {
-        if (document.readyState !== 'complete') return document.body.style.visibility = 'hidden';
-        return document.body.style.visibility = 'visible';
+        if (document.readyState !== 'complete') {
+            return document.getElementById('loader').innerHTML = '<span class="loader"></span>';
+        }
+        return document.getElementById('loader').innerHTML = '';
     }
     // CLICK
     document.onclick = ({ target }) => {
