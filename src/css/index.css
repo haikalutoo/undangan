@@ -148,9 +148,9 @@ video {
     background-repeat: no-repeat;
     background-size: cover;
     transition: 1s;
-    transform: rotate(180deg);
+    /* transform: rotate(180deg);
     scale: 0;
-    opacity: 0;
+    opacity: 0; */
 }
 .undangan.return {
     transform: rotate(0);
@@ -194,7 +194,7 @@ video {
     align-items: center;
     justify-content: center;
     transform: translateX(300%);
-    opacity: 0;
+    /* opacity: 0; */
     transition: 1s;
 }
 .lokasi.return {
@@ -220,7 +220,7 @@ video {
     align-items: center;
     display: flex;
     transform: translateX(300%);
-    opacity: 0;
+    /* opacity: 0; */
     transition: 1s;
 }
 .foto.return {
@@ -282,7 +282,7 @@ video {
     justify-content: center;
     align-items: center;
     transform: translateX(300%);
-    opacity: 0;
+    /* opacity: 0; */
     transition: 1s;
 }
 .konfirmasi.return {
