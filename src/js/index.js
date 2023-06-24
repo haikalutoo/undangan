@@ -123,16 +123,18 @@
         return document.body.style.visibility = 'visible';
     }
     // CLICK
-    document.onclick = async ({ target }) => {
+    document.onclick = ({ target }) => {
     
         // UNDANGAN
         if (
             target === bukaUndangan ||
-            target.classList.contains('buka')
+            target === bukaUndangan.firstElementChild ||
+            target === bukaUndangan.lastElementChild
         ) {
             audio.play();
             animasiOpening();
             animasiUndangan();
+            return;
         }
     
         // HOME
@@ -144,6 +146,7 @@
         {
             animasiOpening();
             animasiUndangan();
+            return;
         }
     
         // LOKASI
@@ -155,6 +158,7 @@
         ) {
             animasiUndangan();
             animasiLokasi();
+            return;
         }
     
         // FOTO
@@ -166,6 +170,7 @@
         ) {
             animasiUndangan();
             animasiFoto();
+            return;
         }
     
         // NAVIGASI FOTO
@@ -183,6 +188,7 @@
         ) {
             animasiUndangan();
             animasiKonfirmasi();
+            return;
         }
     }
 })();

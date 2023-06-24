@@ -186,7 +186,7 @@ video {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transform: translateX(200%);
+    transform: translateX(300%);
     opacity: 0;
     transition: 1s;
 }
@@ -212,7 +212,7 @@ video {
     justify-content: center;
     align-items: center;
     display: flex;
-    transform: translateX(200%);
+    transform: translateX(300%);
     opacity: 0;
     transition: 1s;
 }
@@ -274,7 +274,7 @@ video {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transform: translateX(200%);
+    transform: translateX(300%);
     opacity: 0;
     transition: 1s;
 }
