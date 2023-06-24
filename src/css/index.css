@@ -94,6 +94,13 @@ video {
     scale: 1;
     opacity: 1;
 }
+.opening .buka-undangan .buka-undangan-front {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 .opening p, .opening img {
     transform: translateY(100px);
     opacity: 0;
