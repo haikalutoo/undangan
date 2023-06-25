@@ -51,9 +51,19 @@
                     <div class="alert-konten">
                     </div>
                     <label for="nama">Nama</label>
-                    <input type="text" placeholder="Masukkan nama" id="nama" maxlength="64">
+                    <input type="text" placeholder="Masukkan nama" id="nama" maxlength="100">
+
                     <label for="pesan">Pesan</label>
-                    <textarea id="pesan" cols="30" rows="10" placeholder="Masukkan pesan" maxlength="1000"></textarea>
+                    <textarea id="pesan" cols="30" rows="10" placeholder="Masukkan pesan" maxlength="2000"></textarea>
+
+                    <div class="kehadiran">
+                        <label for="">Hadir</label>
+                        <input type="radio" class="radio" name="kehadiran" value="hadir">
+
+                        <label for="">Tidak Hadir</label>
+                        <input type="radio" class="radio" name="kehadiran" value="tidak-hadir">
+                    </div>
+
                     <button type="submit">Kirim</button>
                 </form>
             </div>

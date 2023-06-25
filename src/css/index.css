@@ -3,10 +3,12 @@
 /* font-family:'Times New Roman', Times, serif; */
 :root {
     font-family: 'Charm', cursive;
-    --gradient: linear-gradient(90deg, rgba(3,18,37, .9) 0%, rgba(150,40,69, .9) 100%);
+    /* --gradient: linear-gradient(90deg, rgba(3,18,37, .9) 0%, rgba(150,40,69, .9) 100%); */
+    --gradient: linear-gradient(90deg, rgba(0, 8, 36, .9) 0%, rgba(0, 94, 131, .9) 100%);
 }
 body {
     min-height: 100vh;
+    color-scheme: dark;
 }
 * {
     margin: 0;
@@ -294,12 +296,21 @@ video {
     display: flex;
     flex-direction: column;
 }
-.konfirmasi label, .konfirmasi button {
-    margin: 1rem 0;
+.konfirmasi label, .konfirmasi .kehadiran {
+    margin: .6rem 0;
 }
-.konfirmasi input, .konfirmasi textarea {
-    color-scheme: dark;
+.konfirmasi input.radio {
+    margin: 0 1rem;
+}
+.konfirmasi input#nama {
     min-height: 40px;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid #919191;
+    color: inherit;
+    border-radius: 5px;
+    padding: .5rem;
+}
+.konfirmasi textarea {
     max-height: 120px;
     max-width: 100%;
     min-width: 100%;
@@ -311,7 +322,7 @@ video {
     color: inherit;
     border-radius: 5px;
 }
-.konfirmasi input:focus, .konfirmasi textarea:focus {
+.konfirmasi input#nama:focus, .konfirmasi textarea:focus {
     outline: none;
     border-color: white;
 }
@@ -327,7 +338,7 @@ video {
     cursor: pointer;
 }
 .konfirmasi button:hover {
-    background-color: rgba(156, 46, 77, 0.5);
+    background-color: rgba(0, 94, 131, .9);
 }
 
 /* GLOBAL */
@@ -363,7 +374,7 @@ video {
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    border-left: 4px solid #FF3D00;
+    border-left: 4px solid rgb(0, 94, 131);
     border-bottom: 4px solid transparent;
     animation: rotation 0.5s linear infinite reverse;
 }
