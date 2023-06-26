@@ -48,20 +48,20 @@
                 <h1>Kirim Doa dan Ucapan</h1>
                 <p>Tuliskan sesuatu ucapan berupa harapan ataupun doa untuk kedua mempelai.</p>
                 <form>
-                    <div class="alert-konten">
-                    </div>
+                    <div class="alert-konten"></div>
+
                     <label for="nama">Nama</label>
-                    <input type="text" placeholder="Masukkan nama" id="nama" maxlength="100">
+                    <input type="text" placeholder="Masukkan nama" id="nama" name="nama" maxlength="100">
 
                     <label for="pesan">Pesan</label>
-                    <textarea id="pesan" cols="30" rows="10" placeholder="Masukkan pesan" maxlength="2000"></textarea>
+                    <textarea id="pesan" name="pesan" cols="30" rows="10" placeholder="Masukkan pesan" maxlength="2000"></textarea>
 
                     <div class="kehadiran">
-                        <label for="">Hadir</label>
-                        <input type="radio" class="radio" name="kehadiran" value="hadir">
+                        <label for="hadir">Hadir</label>
+                        <input type="radio" class="radio" name="kehadiran" value="hadir" id="hadir">
 
-                        <label for="">Tidak Hadir</label>
-                        <input type="radio" class="radio" name="kehadiran" value="tidak-hadir">
+                        <label for="tidak-hadir">Tidak Hadir</label>
+                        <input type="radio" class="radio" name="kehadiran" value="tidak-hadir" id="tidak-hadir">
                     </div>
 
                     <button type="submit">Kirim</button>

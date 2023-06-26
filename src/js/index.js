@@ -106,10 +106,78 @@
     }
 
     /* UNTUK */
-    const nama = document.querySelector('.nama');
-    const untuk = urlParam.get('untuk') ? urlParam.get('untuk').replace('+', '%20') : '';
+    (_ => {
+        const nama = document.querySelector('.nama');
+        const untuk = urlParam.get('untuk') ? urlParam.get('untuk').replace('+', '%20') : '';
+    
+        nama.innerHTML = untuk ? untuk : 'Untuk memasukkan nama tulis ?untuk=nama diakhir url';
+    })();
 
-    nama.innerHTML = untuk ? untuk : 'Untuk memasukkan nama tulis ?untuk=nama diakhir url';
+    class HandleAlert {
+        constructor (alertKonten) {
+            this.alertKonten = alertKonten;
+        }
+        alert (pesan = '', warna = '') {
+            this.alertKonten.innerHTML = `
+                <div class="alert ${warna} muncul">
+                    <p>${pesan}</p>
+                    <i class="bi bi-x alert-close"></i>
+                </div>
+            `;
+        }
+        click (target) {
+            if (target.classList.contains('alert-close')) {
+                this.alertKonten.firstElementChild.classList.remove('muncul');
+            }
+        }
+    }
+
+    class HandleForm extends HandleAlert {
+        constructor (form) {
+            super(form.firstElementChild);
+            this.form = form;
+            this.nama = this.form.nama;
+            this.pesan = this.form.pesan;
+            this.kehadiran = document.getElementsByName('kehadiran');
+            this.button = this.form.lastElementChild;
+        }
+        #url = 'https://script.google.com/macros/s/AKfycbxnJiIVzIaqT_4PqpxYATJnh9yKDENpaNIL-44K6tvyEK1Tt96DHEnmW6yNWW8ydDI/exec';
+        submit () {
+            if (this.nama.value.length < 3 || this.pesan.value.length < 3) {
+                return this.alert('Isi semua form minimal 3 karakter!', 'kuning');
+            }
+            if (!this.kehadiran[0].checked && !this.kehadiran[1].checked) {
+                return this.alert('Pilih kehadiran', 'kuning');
+            }
+            if (sessionStorage.getItem('kirim') === 'terkirim') {
+                return this.alert('Anda sudah mengirimkan pesan!', 'merah');
+            }
+            if (this.form.classList.contains('submit')) return;
+
+            (_ => {
+                this.form.classList.toggle('submit');
+                this.button.innerHTML = '<span class="loader-dua"></span>';
+            })();
+    
+            (async _ => {
+                try {
+                    await fetch(this.#url, { method: 'POST', body: new FormData(this.form) }).then(res => console.log(res))
+                    sessionStorage.setItem('kirim', 'terkirim');
+                    this.button.innerHTML = 'Kirim';
+                    this.alert('Terima kasih! pesan anda sudah kami terima', 'ijo');
+                    this.form.reset();
+                    return;
+                }
+                catch (error) {
+                    this.alert('Error, gagal mengirim pesan!', 'merah');
+                    this.button.innerHTML = 'Kirim';
+                    this.form.classList.remove('ok');
+                    return;
+                }
+            })();
+        }
+    }
+    const handleForm = new HandleForm(document.querySelector('.konfirmasi form'));
     
     /* EVENTS */
     // LOAD
@@ -123,6 +191,12 @@
             return document.getElementById('loader').innerHTML = '<span class="loader"></span>';
         }
         return document.getElementById('loader').innerHTML = '';
+    }
+    // SUBMIT
+    document.onsubmit = e => {
+        e.preventDefault();
+
+        handleForm.submit();
     }
     // CLICK
     document.onclick = ({ target }) => {
@@ -192,5 +266,8 @@
             animasiKonfirmasi();
             return;
         }
+
+        // FORM
+        handleForm.click(target);
     }
 })();
